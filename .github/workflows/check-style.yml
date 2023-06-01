@@ -12,5 +12,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-pr-check'
+	checkstyle_config: 'codestyle/checkstyle.xml'
+	checkstyle_version: '8.42'
         fail_on_error: true
         level: 'warning'
