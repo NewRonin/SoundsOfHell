@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+  String warning = "warning";
+
         mainButton = findViewById(R.id.button);
         mainButton.setOnClickListener(new View.OnClickListener() {
             @Override
