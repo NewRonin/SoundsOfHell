@@ -1,6 +1,6 @@
 name: Automatic code review
 on: 
-  push
+  pull_request
 jobs:
   checkstyle:
     runs-on: ubuntu-latest
