@@ -36,6 +36,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Grant permission
+      run: chmod +x gradlew
     - name: Build APK with gradle
       run: ./gradlew assembleDebug
     - name: Upload APK artifact
