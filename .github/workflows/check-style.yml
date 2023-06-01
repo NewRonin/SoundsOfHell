@@ -1,0 +1,14 @@
+name: Automatic code review
+on: 
+  push
+jobs:
+  checkstyle:
+    runs-on: ubuntu-latest
+    name: Checkstyle job
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check style
+      uses: nikitasavinov/checkstyle-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: 'github-pr-check'
