@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mainButton = findViewById(R.id.button);
+
+    String warning = "Test warning";
+
         mainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
