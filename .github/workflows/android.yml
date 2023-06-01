@@ -60,9 +60,7 @@ jobs:
     - name: Archive files
       run: |
           sudo apt-get install zip
-          cd apk
-          zip -r *
-          cd..
+          zip -r apk.zip
 
     - name: Upload to Google drive
       uses: adityak74/google-drive-upload-git-action@main
