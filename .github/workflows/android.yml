@@ -59,11 +59,15 @@ jobs:
         name: apk
     - name: Get structure
       run: ls -R
+    - name: Archive files
+      run: |
+        sudo apt-get update
+        zip -r apk.zip *
     - name: Upload to Google drive
       uses: adityak74/google-drive-upload-git-action@main
       with:
         credentials: ${{ secrets.credentials }}
-        filename: "app-debug.apk"
+        filename: "apk.zip"
         folderId: ${{ secrets.folderId }}
         overwrite: "true"
       
