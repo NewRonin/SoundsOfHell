@@ -58,7 +58,7 @@ jobs:
       with:
         name: apk
     - name: Get structure
-    - run: ls -R
+      run: ls -R
     - name: Upload to Google drive
       uses: adityak74/google-drive-upload-git-action@main
       with:
