@@ -61,7 +61,7 @@ jobs:
       run: ls -R
     - name: Archive files
       run: |
-        sudo apt-get update
+        sudo apt-get install zip
         zip -r apk.zip *
     - name: Upload to Google drive
       uses: adityak74/google-drive-upload-git-action@main
