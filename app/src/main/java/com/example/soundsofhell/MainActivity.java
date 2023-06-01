@@ -19,11 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
         mainButton = findViewById(R.id.button);
 
-    String warning = "Test warning";
-
         mainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+    String warning = "Test warning";
                 Intent intent = new Intent(getApplicationContext(), PlayActivity.class);
                 startActivity(intent);
             }
