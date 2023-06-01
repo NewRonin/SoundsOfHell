@@ -57,11 +57,13 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: apk
+    - name: Get structure
+    - run: ls -R
     - name: Upload to Google drive
       uses: adityak74/google-drive-upload-git-action@main
       with:
         credentials: ${{ secrets.credentials }}
-        filename: "apk.zip"
+        filename: "app-debug.apk"
         folderId: ${{ secrets.folderId }}
         overwrite: "true"
       
