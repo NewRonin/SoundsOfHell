@@ -6,7 +6,6 @@ on:
 
 jobs:
   docker:
-  
     runs-on: ubuntu-latest
     
     steps:
@@ -28,3 +27,17 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: newronin/devops-practice:latest
+          
+  local-test:
+    name: Local machine run
+    runs-on: self-hosted
+    needs: docker
+    
+    steps:
+      - name: Pull image
+        run: docker pull newronin/devops-practice:latest
+      - name: Run docker container
+        run: docker run --name app -p 80:8080 -d newronin/devops-practice:latest
+    
+    
+  
