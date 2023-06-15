@@ -1,4 +1,4 @@
-FROM gradle:6.1.1-jdk11
+FROM gradle:8.1.1-jdk11
 
 RUN mkdir /opt/project
 COPY .  /opt/project
