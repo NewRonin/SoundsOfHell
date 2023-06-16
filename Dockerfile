@@ -16,3 +16,4 @@ RUN yes | sdkmanager --licenses && \
 		sdkmanager "platforms;android-29" "platforms;android-30" "platforms;android-31" "build-tools;29.0.2" && \
 		cd /opt/project
 RUN gradle build 
+ENTRYPOINT ls -l
